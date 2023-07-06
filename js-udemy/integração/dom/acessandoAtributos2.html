@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Acessando Atributos #02</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <div>
+        <label for="compras">Compras</label>
+        <ul id="compras" destino='escritório' data-urgencia="5">
+            <li>Café</li>
+            <li>Água</li>
+            <li>Copo Descartável</li>
+        </ul>
+    </div>
+    <script>
+        const list = document.querySelector('div ul[destino= "escritorio"]')
+        console.log('childNodes', list.childNodes)
+        console.log('destino', list.destino)//erro
+        console.log('getAttribute', list.getAttribute('destino'))
+        console.log('hasAttribute', list.hasAttribute('destino'))//verificação de atributo
+        console.log('setAttribute', list.setAttribute('destino'))
+        lista.setAttribute('destino', 'empresa')//setAttribute alterar ou adicionar um atributo que n existe
+        lista.setAttribute('status', 'aberto')
+        lista.removeAttribute('destino')
+
+        console.log(lista.dataset)//retorna atributos personalizados do html pelo qual sempre deve começar por data-
+    </script>
+</body>
+
+</html>
